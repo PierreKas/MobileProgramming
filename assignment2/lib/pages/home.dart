@@ -1,11 +1,15 @@
-import 'package:calculator/pages/buttons.dart';
-import 'package:calculator/pages/signin.dart';
-import 'package:calculator/pages/signup.dart';
 import 'package:flutter/material.dart';
-//import 'calculator.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'buttons.dart';
+import 'signin.dart';
+import 'signup.dart';
+import 'package:calculator/platform_channels.dart';
+import 'package:calculator/theme_manager.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final ThemeManager themeManager;
+
+  const HomePage({super.key, required this.themeManager});
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -21,10 +25,32 @@ class _HomePageState extends State<HomePage> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+    PlatformChannels.startListening(); // Start listening for changes
+  }
+
+  @override
+  void dispose() {
+    PlatformChannels.stopListening(); // Stop listening when the widget is disposed
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('My App'),
+        actions: [
+          Switch(
+            value: widget.themeManager.isDarkMode,
+            onChanged: (value) {
+              setState(() {
+                widget.themeManager.toggleTheme();
+              });
+            },
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -117,40 +143,41 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-        body: SafeArea(
-      bottom: false,
-      child: Column(
-        children: [
-          //output
-          Expanded(
-            child: SingleChildScrollView(
-              reverse: true,
-              child: Container(
-                alignment: Alignment.bottomRight,
-                padding: const EdgeInsets.all(32),
-                child: const Text(
-                  "0",
-                  style: TextStyle(
-                      fontSize: 100, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.end,
+           body: SafeArea(
+        bottom: false,
+        child: Column(
+          children: [
+            // Output display
+            Expanded(
+              child: SingleChildScrollView(
+                reverse: true,
+                child: Container(
+                  alignment: Alignment.bottomRight,
+                  padding: const EdgeInsets.all(32),
+                  child: const Text(
+                    "0",
+                    style: TextStyle(fontSize: 100, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.end,
+                  ),
                 ),
               ),
             ),
-          ),
-          //buttons
-          Wrap(
-            children: Btn.buttonValues
-                .map(
-                  (value) => SizedBox(
+            // Buttons
+            Wrap(
+              children: Btn.buttonValues
+                  .map(
+                    (value) => SizedBox(
                       width: screenSize.width / 4,
                       height: screenSize.width / 5,
-                      child: buildButton(value)),
-                )
-                .toList(),
-          )
-        ],
+                      child: buildButton(value),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 
   Widget buildButton(value) {
@@ -171,15 +198,16 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 : Colors.black,
         clipBehavior: Clip.hardEdge,
         shape: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.white24,
-          ),
+          borderSide: const BorderSide(color: Colors.white24),
           borderRadius: BorderRadius.circular(50),
         ),
         child: InkWell(
           onTap: () {},
           child: Center(
-            child: Text(value),
+            child: Text(
+              value,
+              style: const TextStyle(color: Colors.white, fontSize: 24),
+            ),
           ),
         ),
       ),

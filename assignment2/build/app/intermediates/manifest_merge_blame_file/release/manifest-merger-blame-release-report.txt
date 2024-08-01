@@ -1,0 +1,120 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.calculator"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="34" />
+9-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:2:1-62
+11-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:2:18-60
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:3:1-74
+12-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:3:18-72
+13    <uses-permission android:name="android.permission.BATTERY_STATS" />
+13-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:4:1-67
+13-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:4:18-65
+14    <!--
+15         Required to query activities that can process text, see:
+16         https://developer.android.com/training/package-visibility and
+17         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+18
+19         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+20    -->
+21    <queries>
+21-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:43:5-48:15
+22        <intent>
+22-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:44:9-47:18
+23            <action android:name="android.intent.action.PROCESS_TEXT" />
+23-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:45:13-72
+23-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:45:21-70
+24
+25            <data android:mimeType="text/plain" />
+25-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:46:13-50
+25-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:46:19-48
+26        </intent>
+27    </queries>
+28
+29    <application
+30        android:name="android.app.Application"
+30-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:8:9-42
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.6.0] /home/pierre-kasanani/.gradle/caches/transforms-3/284a410c767ad6c7a2b0ffc8d8d85981/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+32        android:icon="@mipmap/ic_launcher"
+32-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:9:9-43
+33        android:label="calculator" >
+33-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:7:9-35
+34        <activity
+34-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:10:9-31:20
+35            android:name="com.example.calculator.MainActivity"
+35-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:11:13-41
+36            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+36-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:16:13-163
+37            android:exported="true"
+37-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:12:13-36
+38            android:hardwareAccelerated="true"
+38-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:17:13-47
+39            android:launchMode="singleTop"
+39-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:13:13-43
+40            android:taskAffinity=""
+40-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:14:13-36
+41            android:theme="@style/LaunchTheme"
+41-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:15:13-47
+42            android:windowSoftInputMode="adjustResize" >
+42-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:18:13-55
+43
+44            <!--
+45                 Specifies an Android theme to apply to this Activity as soon as
+46                 the Android process has started. This theme is visible to the user
+47                 while the Flutter UI initializes. After that, this theme continues
+48                 to determine the Window background behind the Flutter UI.
+49            -->
+50            <meta-data
+50-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:23:13-26:17
+51                android:name="io.flutter.embedding.android.NormalTheme"
+51-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:24:15-70
+52                android:resource="@style/NormalTheme" />
+52-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:25:15-52
+53
+54            <intent-filter>
+54-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:27:13-30:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:28:17-68
+55-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:28:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:29:17-76
+57-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:29:27-74
+58            </intent-filter>
+59        </activity>
+60        <!--
+61             Don't delete the meta-data below.
+62             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+63        -->
+64        <meta-data
+64-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:34:9-36:33
+65            android:name="flutterEmbedding"
+65-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:35:13-44
+66            android:value="2" />
+66-->/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/android/app/src/main/AndroidManifest.xml:36:13-30
+67
+68        <uses-library
+68-->[androidx.window:window:1.0.0-beta04] /home/pierre-kasanani/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+69            android:name="androidx.window.extensions"
+69-->[androidx.window:window:1.0.0-beta04] /home/pierre-kasanani/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+70            android:required="false" />
+70-->[androidx.window:window:1.0.0-beta04] /home/pierre-kasanani/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+71        <uses-library
+71-->[androidx.window:window:1.0.0-beta04] /home/pierre-kasanani/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+72            android:name="androidx.window.sidecar"
+72-->[androidx.window:window:1.0.0-beta04] /home/pierre-kasanani/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+73            android:required="false" />
+73-->[androidx.window:window:1.0.0-beta04] /home/pierre-kasanani/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+74    </application>
+75
+76</manifest>

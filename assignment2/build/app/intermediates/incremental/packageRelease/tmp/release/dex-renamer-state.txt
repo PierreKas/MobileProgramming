@@ -1,0 +1,4 @@
+#Thu Aug 01 16:27:31 CAT 2024
+base.0=/media/pierre-kasanani/240D8B9875FBC7EA1/AUCA/AUCA_COURSES/semester_9/Mobile_programming/MobileProgramming/assignment2/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
